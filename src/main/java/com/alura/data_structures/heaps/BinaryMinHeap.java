@@ -1,18 +1,18 @@
-package com.alura.data_structures;
+package com.alura.data_structures.heaps;
 
-public class Heap {
+public class BinaryMinHeap {
     int[] heap;
     int size;
 
-    public Heap(int default_size){
+    public BinaryMinHeap(int max_size){
         this.size = 0;
-        this.heap = new int[default_size];
+        this.heap = new int[max_size];
     }
 
-    static Heap buildHeapFromArray(int [] arr) {
-        Heap heap = new Heap(arr.length + 1);
-        for (int i = 0; i < arr.length; i++) {
-            heap.insert(arr[i]);
+    static BinaryMinHeap buildHeapFromArray(int [] arr) {
+        BinaryMinHeap heap = new BinaryMinHeap(arr.length + 1);
+        for (int j : arr) {
+            heap.insert(j);
         }
 
         return heap;
